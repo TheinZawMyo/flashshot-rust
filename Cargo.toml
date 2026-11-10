@@ -1,0 +1,26 @@
+[package]
+name = "flashshot"
+version = "0.1.0"
+edition = "2021"
+description = "Lightweight macOS screenshot & annotation tool built with GPUI"
+license = "MIT"
+
+[[bin]]
+name = "flashshot"
+path = "src/main.rs"
+
+[dependencies]
+gpui = "0.2.2"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+arboard = { version = "3.7", default-features = false, features = ["image-data"] }
+global-hotkey = "0.10"
+anyhow = "1"
+ab_glyph = "0.2"
+rfd = "0.18"
+smallvec = "1"
+tray-icon = "0.19"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

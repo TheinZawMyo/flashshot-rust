@@ -1,0 +1,6 @@
+# Rust build output
+/target/
+
+# macOS metadata and debug symbols
+.DS_Store
+*.dSYM/
