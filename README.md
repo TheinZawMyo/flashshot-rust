@@ -41,3 +41,13 @@ cargo build --release
 ```
 
 The release binary is written to `target/release/flashshot`.
+
+## Build an Apple Silicon app
+
+On an M1, M2, or later Apple Silicon Mac, create a local `.app` bundle with:
+
+```sh
+./scripts/package-macos.sh
+```
+
+This creates `dist/Flashshot.app`. Drag it into **Applications** and open it from Finder. The bundle is ad-hoc signed for local use; distributing it to other Macs requires Developer ID signing and notarization.
